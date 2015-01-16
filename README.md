@@ -11,8 +11,15 @@ The task is simple: play with the Github API. You will have to develop an applic
 - Create a comment when viewing a issue
 - ...
 
-To get started, just do the fork of this repository, implement and then make a pull request, listing the features in the README that you have developed.
+To get started, just do the fork of this repository, implement and then make a pull request, listing the features in the README that you have developed and how to run it.
 
 It is very important that you show us your knowledge regarding good programming practices, testing, patterns and even the bad practices. Therefore, take these points into consideration when choosing and implementing your features.
+
+Besides coding skills, there are two things that aren't strictly required but would be nice to see you using:
+
+- a CSS pre-processor of your choice
+- a build system like Grunt, Gulp or even Broccoli, we like to experiment with different things here at Edools :)
+
+And if you feel really inspired, tell us how did you make your decisions regarding tools choosing.
 
 We wish you good luck, and may the Quality be with you!
