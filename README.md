@@ -1,23 +1,30 @@
-AngularJS Exam
-==============
+Exame vaga Front-End
+====================
 
-Dear developer, the goal of this exam is to know a little more about your programming skills. Here at Edools we value too much excellence, a code with good quality makes us work better and happier :), and increase our ability to deliver customer value with speed and consistency. With this in mind, we want to know how you think the code, and how is your relationship with it.
+Caro desenvolvedor, o objetivo deste exame é conhecer um pouco mais sobre suas habilidades de programação. Aqui, na Edools, valorizamos muito a excelência, o código com boa qualidade nos faz trabalhar melhor e mais felizes :) e aumentar nossa capacidade de oferecer valor ao cliente com rapidez e consistência. Com isso em mente, queremos saber como você escreve seu código.
 
-The task is simple: play with the Github API. You will have to develop an application using AngularJS that will consume some public resources from Github through its API ( https://developer.github.com/ ), and present in a simple way but well-structured. Here are some suggestions of what you can do:
+A tarefa é simples: brincar com a API Github. Você terá que desenvolver uma aplicação que consumirá alguns recursos públicos da Github através de sua API (https://developer.github.com/), e presente de forma simples, mas bem estruturada. Aqui estão algumas sugestões sobre o que você pode fazer:
 
-- List repositories
-- Filter repositories
-- List the issues inside repository visualization
-- Create a comment when viewing a issue
+- Lista de repositórios
+- Repositórios de filtros
+- Liste os problemas dentro da visualização do repositório
+- Crie um comentário ao visualizar um problema
 - ...
 
-To get started, just do the fork of this repository, implement and then make a pull request, listing the features in the README that you have developed and how to run it.
+Para começar, basta fazer o fork deste repositório, implementar e, em seguida, abrir um novo pull request, listando os recursos no README que você desenvolveu e como executá-lo.
 
-It is very important that you show us your knowledge regarding good programming practices, **testing**, patterns and even the bad practices. Therefore, take these points into consideration when choosing and implementing your features. For this task to be challeging enough, we'd like you to use Javascript's ES6 syntax and features and keep your code modularized.
+A aplicação precisa ser desenvolvida com conceitos web components (https://tableless.com.br/web-components-introducao/). 
+Além disos é necessário que aplicação seja desenvolvida usando um dos seguintes Framework: 
 
-Besides things mentioned above, there are a few things that would be a big plus to see:
+- Vue (https://vuejs.org)
+- Angular (https://angularjs.org)
+- React (https://reactjs.org)
 
-- usage a CSS pre-processor of your choice
-- usage of a tool to help you with your workflows (grunt, gulp, broccoli, webpack...)
+É muito importante que você mostre seu conhecimento sobre boas práticas de programação, testes, padrões e até mesmo as más práticas. Portanto, tome estes pontos em consideração ao escolher e implementar seus recursos. Para que esta tarefa seja suficiente, gostaríamos que você usasse a sintaxe e recursos do ES6 do Javascript e que mantém seu código modularizado.
 
-We wish you good luck, and may the Quality be with you!
+Além das coisas mencionadas acima, há algumas coisas que seriam uma grande vantagem para ver:
+
+- use um pré-processador CSS de sua escolha
+- uso de uma ferramenta para ajudá-lo com seus fluxos de trabalho (grunt, gulp, brócolis, webpack ...)
+
+Desejamos-lhe boa sorte, e que a Qualidade esteja com você!
