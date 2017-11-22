@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+  <div class="container">
+    <Card v-for="cards in 7" v-bind:key="cards"></Card>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Card from './components/Card'
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    Card
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  html {
+    font-family: 'monospace';
+  }
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    max-width: 980px;
+  }
 </style>
