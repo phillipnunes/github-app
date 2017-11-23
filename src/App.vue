@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <Card v-for="cards in 7" v-bind:key="cards"></Card>
+    <Card></Card>
+    <button @click="getData">GET</button>
   </div>
 </template>
 
@@ -8,6 +9,20 @@
 import Card from './components/Card'
 
 export default {
+  data () {
+    return {
+      repositories: []
+    }
+  },
+  methods: {
+    getData () {
+      this.$http.get('https://api.github.com/search/repositories?q=tetris')
+        .then(response => {
+          return response.json()
+        })
+        .then(data => console.log(data))
+    }
+  },
   components: {
     Card
   }
