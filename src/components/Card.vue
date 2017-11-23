@@ -23,12 +23,12 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   .card__container {
     -moz-box-shadow: 12px 12px 22px -5px rgba(226,226,226,1);
     -webkit-box-shadow: 12px 12px 22px -5px rgba(226,226,226,1);
-    border: 1px solid #CCC;
     box-shadow: 12px 12px 22px -5px rgba(226,226,226,1);
+    border: 1px solid #CCC;
     flex: 1 0 25%;
     height: 340px;
     margin: 15px;
