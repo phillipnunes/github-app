@@ -1,62 +1,65 @@
 <template>
   <div class="card__container">
     <header class="card__header">
-      <img class="card__image" src="https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/vue/vue.png" alt="Imagem do repositório">
+      <img class="card__image" :src="avatar" alt="Imagem do repositório">
     </header>
     <main class="card__body">
-      <h3 class="card__title">Vue.js</h3>
-      <p class="card__text">Vue.js is a JavaScript framework for building interactive web applications.</p>
+      <h3 class="card__title">{{ name }}</h3>
+      <p class="card__text">{{ description }}</p>
     </main>
     <footer class="card__footer">
-      <p>Javascript</p>
+      <p>{{ language }}</p>
     </footer>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  props: ['name', 'avatar', 'description', 'language']
 }
 </script>
 
 <style lang="scss" scoped>
+  @import '../sass/mixins.scss';
+  @import '../sass/colors.scss';
+
   .card__container {
-    -moz-box-shadow: 12px 12px 22px -5px rgba(226,226,226,1);
-    -webkit-box-shadow: 12px 12px 22px -5px rgba(226,226,226,1);
-    box-shadow: 12px 12px 22px -5px rgba(226,226,226,1);
-    border: 1px solid #CCC;
+    @include box-shadow;
+    border: 1px solid $border-color;
     flex: 1 0 25%;
-    height: 340px;
+    height: 300px;
     margin: 15px;
     min-width: 5em;
     width: 250px;
   }
   .card__header {
-    background: #C9D6FF;
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    @include background;
     height: 80px;
+    padding: 5px 0;
     text-align: center;
   }
   .card__image {
     height: 100%;
   }
   .card__body {
+    min-height: 120px;
     padding: 0 10px;
   }
   .card__title,
   .card__footer,
   .card__text {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    max-height: 72px;
+    overflow: hidden;
     text-align: center;
+    text-overflow: ellipsis;
   }
   .card__text {
     word-break: break-all;
   }
   .card__footer {
-    border-top: 1px solid #CCC;
+    border-top: 1px solid $border-color;
   }
 </style>

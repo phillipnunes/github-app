@@ -1,19 +1,24 @@
 <template>
   <div>
     <header class="header">
-      <Search></Search>
-      <Button></Button>
+      <Search @result="setRepositories"></Search>
     </header>
-    <main class="main container">
-      <Card></Card>
-    </main>
+      <main class="main container" v-for="rep in repositories" v-bind:key="rep">
+        <div v-for="item in rep" v-bind:key="item">
+          <Card
+            :name="item.name"
+            :avatar="item.owner.avatar_url"
+            :description="item.description"
+            :language="item.language">
+          </Card>
+        </div>
+      </main>
   </div>
 </template>
 
 <script>
 import Card from './components/Card'
 import Search from './components/Search'
-import Button from './components/Button'
 
 export default {
   data () {
@@ -22,21 +27,19 @@ export default {
     }
   },
   methods: {
-    getData () {
-      this.$http.get('https://api.github.com/search/repositories?q=tetris')
-        .then(response => {
-          return response.json()
-        })
-        .then(data => console.log(data))
+    setRepositories (value) {
+      this.repositories = value
     }
   },
   components: {
-    Card, Search, Button
+    Card, Search
   }
 }
 </script>
 
 <style lang="scss">
+  @import './sass/mixins.scss';
+
   html {
     font-family: 'monospace';
   }
@@ -45,15 +48,12 @@ export default {
     max-width: 980px;
   }
   .header {
-    background: #C9D6FF;
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
-    display: flex;
+    @include background;
     height: 200px;
-    justify-content: center;
   }
   .main {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
   }
 </style>
