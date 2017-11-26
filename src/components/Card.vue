@@ -49,6 +49,7 @@ export default {
   }
   .card__title {
     text-align: center;
+    word-wrap: break-word;
   }
   .card__footer,
   .card__text {
