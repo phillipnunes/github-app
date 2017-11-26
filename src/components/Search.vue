@@ -23,12 +23,10 @@ export default {
     getData () {
       this.$http.get('https://api.github.com/search/repositories?q=' + this.search_value)
         .then(response => {
+          this.handleCallback(response)
           return response.json()
         })
-        .then(data => {
-          if (data.total_count === 0) {
-            this.showMessage('not_found')
-          }
+        .then(data => { // Success
           var resultArray = []
           for (let key in data) {
             if (key === 'items') {
@@ -36,6 +34,8 @@ export default {
             }
           }
           this.$emit('result', resultArray)
+        }, response => { // Error
+          this.handleCallback(response)
         })
       this.clear()
     },
@@ -43,9 +43,20 @@ export default {
       this.search_value = ''
       this.total_results = ''
     },
+    handleCallback (response) {
+      if (response.body.total_count === 0) {
+        this.showMessage('not_found')
+      }
+      if (response.status === 403) {
+        this.showMessage('limit_exceeded')
+      }
+    },
     showMessage (value) {
       if (value === 'not_found') {
         this.total_results = 'Nenhum resultado encontrado'
+      }
+      if (value === 'limit_exceeded') {
+        this.total_results = 'WoW...você excedeu o limite de buscas! Aguarde um pouco.'
       }
     }
   }

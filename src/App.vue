@@ -3,8 +3,8 @@
     <header class="header">
       <Search @result="setRepositories"></Search>
     </header>
-      <main class="main container" v-for="rep in repositories" v-bind:key="rep">
-        <div v-for="item in rep" v-bind:key="item">
+      <main class="main container" v-for="rep in repositories" :key="rep">
+        <div v-for="item in rep" :key="item">
           <Card
             :name="item.name"
             :avatar="item.owner.avatar_url"
