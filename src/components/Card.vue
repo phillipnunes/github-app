@@ -1,5 +1,5 @@
 <template>
-  <div class="card__container">
+  <div class="card">
     <header class="card__header">
       <img class="card__image" :src="avatar" alt="Imagem do repositório">
     </header>
@@ -25,7 +25,7 @@ export default {
   @import '../sass/mixins.scss';
   @import '../sass/colors.scss';
 
-  .card__container {
+  .card {
     @include box-shadow;
     border: 1px solid $border-color;
     flex: 1 0 25%;

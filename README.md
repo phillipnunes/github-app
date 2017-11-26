@@ -38,3 +38,4 @@ npm test
 - Sass
 - Components
 - No CSS framework, just flexbox and etc.
+- CSS classes named using [BEM](http://getbem.com/)

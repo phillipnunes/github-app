@@ -79,7 +79,7 @@ export default {
     padding-left: 10px;
     width: 300px;
   }
-  input:focus {
+  .search__input:focus {
     outline: 0 none;
   }
   .search__title,
