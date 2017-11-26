@@ -1,8 +1,9 @@
 # github-app
 
-> GitHub App
+## GitHub App
+
 > This application searches the GitHub repository using various criteria:
-[Search documentation](https://help.github.com/articles/searching-repositories/)
+[Documentation](https://help.github.com/articles/searching-repositories/)
 
 ## How to use
 It's easy. Fill in the search and press enter.
