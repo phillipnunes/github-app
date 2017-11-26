@@ -4,7 +4,9 @@
       <img class="card__image" :src="avatar" alt="Imagem do repositório">
     </header>
     <main class="card__body">
-      <h3 class="card__title">{{ name }}</h3>
+      <a :href="url" target="_blank">
+        <h3 class="card__title">{{ name }}</h3>
+      </a>
       <p class="card__text">{{ description }}</p>
     </main>
     <footer class="card__footer">
@@ -15,7 +17,7 @@
 
 <script>
 export default {
-  props: ['name', 'avatar', 'description', 'language']
+  props: ['name', 'avatar', 'description', 'language', 'url']
 }
 </script>
 
@@ -45,7 +47,9 @@ export default {
     min-height: 120px;
     padding: 0 10px;
   }
-  .card__title,
+  .card__title {
+    text-align: center;
+  }
   .card__footer,
   .card__text {
     -webkit-box-orient: vertical;

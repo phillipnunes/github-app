@@ -9,7 +9,8 @@
             :name="item.name"
             :avatar="item.owner.avatar_url"
             :description="item.description"
-            :language="item.language">
+            :language="item.language"
+            :url="item.html_url">
           </Card>
         </div>
       </main>
@@ -55,5 +56,10 @@ export default {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+  }
+  @media (max-width: 563px) {
+    .main {
+      justify-content: center;
+    }
   }
 </style>
