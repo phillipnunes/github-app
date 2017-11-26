@@ -1,14 +1,18 @@
 # GitHub App
 
-> This application was developed using Vue and searches the GitHub repository using various criteria:
+> This application was developed using Vue.js and searches the GitHub repository using various criteria:
 [Documentation](https://help.github.com/articles/searching-repositories/)
 
 ## How to use
+
 It's easy. Fill in the search and press enter.
 
 ## Build Setup
 
 ``` bash
+# install node.
+https://nodejs.org/en/download/
+
 # install dependencies
 npm install
 
@@ -27,3 +31,10 @@ npm run unit
 # run all tests (Not implemented)
 npm test
 ```
+
+## Some things I used
+
+- Vue.js configured with [Vue Cli](https://github.com/vuejs/vue-cli)
+- Sass
+- Components
+- No CSS framework, just flexbox and etc.
