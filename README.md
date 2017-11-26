@@ -1,6 +1,6 @@
 # GitHub App
 
-> This application searches the GitHub repository using various criteria:
+> This application was developed using Vue and searches the GitHub repository using various criteria:
 [Documentation](https://help.github.com/articles/searching-repositories/)
 
 ## How to use
